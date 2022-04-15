@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         URL minimizer
 // @namespace    https://github.com/GottZ/url-minimizer
-// @version      0.0.1
+// @version      0.0.2
 // @description  shorten url's to their minimum representation for better sharing without tracking information
 // @author       GottZ
 // @include      /^https?:\/\/(www\.)?(amazon|ebay|youtube)\.[a-z]+/
@@ -9,6 +9,9 @@
 // @grant        GM_registerMenuCommand
 // @grant        GM_notification
 // @run-at       document-idle
+// @updateURL    https://github.com/GottZ/url-minimizer/releases/latest/download/script.user.js
+// @installURL   https://github.com/GottZ/url-minimizer/releases/latest/download/script.user.js
+// @downloadURL  https://github.com/GottZ/url-minimizer/releases/latest/download/script.user.js
 // ==/UserScript==
 
 'use strict';

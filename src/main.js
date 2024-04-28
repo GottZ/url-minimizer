@@ -2,12 +2,13 @@
 // @name         URL minimizer
 // @namespace    https://github.com/GottZ/url-minimizer
 // @version      0.0.3
-// @description  shorten url's to their minimum representation for better sharing without tracking information
+// @description  Shorten url's to their minimum representation for better sharing without tracking information.
 // @author       GottZ
+// @contributors BowuDev
 // @include      /^https?:\/\/(www\.)?(amazon|ebay|youtube)\.[a-z]+/
 // @include      https://*.gumroad.com/l/*
 // @include      https://www.etsy.com/listing/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=gottz.de
+// @icon         https://gottz.de/favicon.ico
 // @grant        GM_registerMenuCommand
 // @grant        GM_notification
 // @run-at       document-idle
@@ -26,7 +27,7 @@ const sites = {
         template: ({host, path}) => `https://${host[1]}/dp/${path[1]}`,
     },
     // https://www.ebay.de/itm/(...)?_trkparms=.....
-    "Ebay": {
+    "eBay": {
         host: /\b(ebay\.[a-z]+)$/,
         path: /itm\/(\d+)/,
         template: ({host, path}) => `https://${host[1]}/itm/${path[1]}`,
@@ -47,7 +48,7 @@ const sites = {
     "Gumroad": {
         host: /\b(\w+)(\.gumroad)\.com$/,
         path: /^\/l\/(\w+)$/,
-        template: ({host,path}) => `https://${host[1]}.gumroad.com/l/${path[1]}`,
+        template: ({host, path}) => `https://${host[1]}.gumroad.com/l/${path[1]}`,
     },
 };
 
